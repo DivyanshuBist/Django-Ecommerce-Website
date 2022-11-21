@@ -15,3 +15,17 @@
 
 ## Step 4: run localserver (default port is 8000)
 `py manage.py runserver`
+
+## Images
+![payment](screenshots\payment.PNG)
+![index](screenshots\index.PNG)
+![cart](screenshots\cart.PNG)
+![product_Detail](screenshots\product_Detail.PNG)
+
+## Features Added
+- Login And Registration
+- Multiple Delivery Addresses
+- Password Reset
+- Change Password
+- Search Bar
+
