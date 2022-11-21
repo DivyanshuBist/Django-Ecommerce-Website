@@ -1,0 +1,51 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Category{% endblock title %}
+
+
+{% block main-content %}
+    <div class="container my-5">
+            <div class="col-sm-9">
+                <div class="row">
+                    {% for prod in page_obj %}
+                        <div class="col text-center mb-4">
+                            <a href="{% url 'product-detail' prod.id %}" class="btn">
+                                <div>
+                                    <img src="{{prod.product_image.url}}" width="300px" height="200px"/>
+                                    <div class="fw-bold">{{prod.title}}</div>
+                                    <div class="fw-bold text-danger">
+                                        Rs.{{prod.discounted_price}}/-
+                                        <small class="fw-light text-decoration-line-through">
+                                            {{prod.selling_price}}
+                                        </small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                    {% endfor %}
+
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj.has_previous %}
+                                <a href="?page=1">&laquo; first</a>
+                                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                            {% endif %}
+                
+                            <span class="current">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                            </span>
+                
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                            {% endif %}
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock main-content %}

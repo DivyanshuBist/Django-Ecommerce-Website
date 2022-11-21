@@ -1,0 +1,40 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}All Category{% endblock title %}
+
+
+{% block main-content %}
+    {% for category in page_obj %}
+        <div class ="col-md-4 col-sm-4 mi-go wow fadeInUp"
+        data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration:1s; animation-delay:0.6s;
+        animation-name:None;">
+                <div class="goodnesssec buttermilk buttermilk">
+                    <a href="{% url 'category' category.title %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{{category.category_image.url}}" class="img-responsive center-block" width="200px"  height="200px" alt="">
+                            <p class="mlkpro">{{category.title}}</p>
+                        </div>
+                    </a>
+            </div>
+        </div>
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endblock main-content %}
