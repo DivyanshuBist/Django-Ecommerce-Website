@@ -17,10 +17,10 @@
 `py manage.py runserver`
 
 ## Images
-![payment](screenshots\payment.PNG)
-![index](screenshots\index.PNG)
-![cart](screenshots\cart.PNG)
-![product_Detail](screenshots\product_Detail.PNG)
+![payment](screenshots/payment.png)
+![index](screenshots/index.png)
+![cart](screenshots/cart.png)
+![product_Detail](screenshots/product_Detail.png)
 
 ## Features Added
 - Login And Registration
