@@ -1,5 +1,4 @@
 # Django based Ecommerce Website
-## Folder Structure
 
 # To run the project locally
 
@@ -17,10 +16,17 @@
 `py manage.py runserver`
 
 ## Images
-![payment](screenshots\payment.PNG)
-![index](screenshots\index.PNG)
-![cart](screenshots\cart.PNG)
-![product_Detail](screenshots\product_Detail.PNG)
+![index](https://github.com/DivyanshuBist/Django-Ecommerce-Website/blob/master/screenshots/index.PNG)
+
+![product_Detail](https://github.com/DivyanshuBist/Django-Ecommerce-Website/blob/master/screenshots/product_Detail.PNG)
+
+![payment](https://github.com/DivyanshuBist/Django-Ecommerce-Website/blob/master/screenshots/payment.PNG)
+
+
+
+![cart](https://github.com/DivyanshuBist/Django-Ecommerce-Website/blob/master/screenshots/cart.PNG)
+
+
 
 ## Features Added
 - Login And Registration
@@ -29,3 +35,7 @@
 - Change Password
 - Search Bar
 
+## Features to be added
+- Image Based Searching (Image Processing)
+- WishList
+- Email Authorization
