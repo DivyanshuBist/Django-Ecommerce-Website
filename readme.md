@@ -36,6 +36,6 @@
 - Search Bar
 
 ## Features to be added
--Image Based Searching (Image Processing)
--WishList
--Email Authorization
+- Image Based Searching (Image Processing)
+- WishList
+- Email Authorization
