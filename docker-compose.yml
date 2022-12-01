@@ -1,0 +1,29 @@
+version: '3.7'
+services: 
+  app:
+    volumes:
+      - static:/static
+    env_file:
+      - .env
+    build: .
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      -POSTGRES_DB=postgres
+      -POSTGRES_USER=postgres
+      -POSTGRES_PASSWORD=postgres
+    container_name: postgres_db
+    
+  nginx:
+    build: ./conf.d
+    volumes:
+      - static:/static
+    depends_on:
+      - app
+    ports:
+      - "3000:3000"
